@@ -11,7 +11,7 @@
 </head>
 <body>
   
-    <div class="container-fluid bg-dark">
+  <div class="container-fluid bg-dark">
 
         <header class="text-center">
           <img src="../imgs/myGym_logo.png" class="img-fluid" alt="My Gym Logo">
@@ -58,22 +58,31 @@
             </ul>
           </div>
         </nav>
-       <!--====================== F I N   D E L   N A V B A R ======================-->
-        <div class="container mt-4 text-muted">
-          <form action="formulario.php" method="get">
-            <div class="form-floating mb-3 mt-3">
-              <input type="text" class="form-control" id="email" placeholder="Enter email" name="email">
-              <label for="email">Email</label>
-            </div>
-            
-            <div class="form-floating mt-3 mb-3">
-              <input type="text" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
-              <label for="pwd">Password</label>
-            </div>
-          </form>
-        </div>
-    </div>
+  </div>  
+<!--====================== F I N   D E L   N A V B A R ======================-->
 
+<!--====================== F O R M U L A R I O ======================-->
+    
+  <div class="container text-muted">
+    <h2>Datos Personales</h2>
+
+    <form action="formulario.php" method="get">
+
+      <div class="row">
+        <div class=" col form-floating mb-3 mt-3">
+          <input type="text" class="form-control form-control-sm border-0 border-start border-bottom border-3" id="email" placeholder="Enter email" name="email">
+          <label for="email" class="ps-3">Nombre</label>
+        </div>
+          
+        <div class="col form-floating mt-3 mb-3">
+          <input type="text" class="form-control border-0 border-start border-bottom border-3" id="pwd" placeholder="Enter password" name="pswd">
+          <label for="pwd" class="ps-3">Apellidos</label>
+        </div>
+      </div>
+
+    </form>
+          
+  </div>
     
 </body>
 </html>
