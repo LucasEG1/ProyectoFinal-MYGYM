@@ -68,14 +68,14 @@
 
   <div class="container mt-2 text-muted">
 
-    <form action="formulario.php" method="get">
-      <fieldset class="border-top border-bottom">
+    <form action="formulario.php" method="get" autocomplete="on">
+      <fieldset class="border-top border-bottom border-danger border-2" style="border-radius:30px;"> <!-- DATOS PERSONALES -->
 
-        <legend>Datos Personales</legend>
-        <div class="row">
-          <!--  ms-5 me-5  -->
+        <legend class="mt-2">Datos Personales</legend>
+        <div class="row"> <!--  ms-5 me-5  -->
+
           <div class="col-5 form-floating mb-3 mt-3">
-            <input type="text" class="form-control form-control-sm border-0 border-start border-bottom border-2"
+            <input type="text" class="form-control border-0 border-start border-bottom border-2"
               id="nombre" placeholder="Escribe tu nombre" name="nomb">
             <label for="nombre" class="ms-3">Nombre</label>
           </div>
@@ -85,22 +85,23 @@
               placeholder="Escribe tus apellidos" name="apellido">
             <label for="apellido" class="ms-3">Apellidos</label>
           </div>
+
         </div>
 
         <div class="row">
-          <div class="col-4 form-floating mb-3 mt-4">
-            <!-- DNI -->
+
+          <div class="col-4 form-floating mb-3 mt-4"> <!-- DNI -->
             <input type="text" class="form-control form-control-sm border-0 border-start border-bottom border-2"
               id="dni" placeholder="Escribe tu dni" name="dni">
             <label for="dni" class="ms-3">Dni</label>
           </div>
 
-          <div class="col-4 form-floating"> <!-- Fecha Nacimiento -->
+          <div class="col-4 form-floating ps-3"> <!-- Fecha Nacimiento -->
 
             <div class="row">
               <span class="ms-3 g-0">Fecha Nacimiento</span>
 
-              <div class="col-3 form-floating mb-2">
+              <div class="col-md-3 form-floating mb-2">
                 <select class="form-select border-0 border-start border-bottom border-2" id="dia" name="dia">
                   <option>1</option>
                   <option>2</option>
@@ -137,7 +138,7 @@
                 <label for="dia" class="ms-3">Dia</label>
               </div>
 
-              <div class="col form-floating mb-3">
+              <div class="col-md form-floating mb-3">
                 <select class="form-select border-0 border-start border-bottom border-2" id="mes" name="mes">
                   <option>Enero</option>
                   <option>Febrero</option>
@@ -155,7 +156,7 @@
                 <label for="mes" class="ms-3">Mes</label>
               </div>
 
-              <div class="col-3 form-floating mb-3">
+              <div class="col-md-3 form-floating mb-3">
                 <select class="form-select border-0 border-start border-bottom border-2" id="año" name="año">
                   <option value="2022">2022</option>
                   <option value="2021">2021</option>
@@ -237,17 +238,134 @@
             </div>
           </div>
 
-          <div class="col-4 form-floating bg-dark"> <!-- Div Género-->
-            
-            
-                <button type="button" class="btn btn-outline-secondary btn-lg" id="hombre">Hombre</button>              
-                <button type="button" class="btn btn-outline-secondary btn-lg " id="mujer">Mujer</button>
-              
-             
-           
+          <div class="col-4 form-floating ps-5"> <!-- Div Género-->
+
+            <div class="row">
+              <span class="ms-3 g-0">Sexo</span>
+
+              <div class="col-md-3 form-floating mt-2">
+                <button type="button"
+                  class="btn btn-outline-secondary border-0 border-start border-bottom border-2"
+                  id="hombre">Hombre</button>
+              </div>
+
+              <div class="col-md-3 form-floating mt-2">
+                <button type="button"
+                  class="btn btn-outline-secondary ms-2 border-0 border-start border-bottom border-2" id="mujer">Mujer</button>
+              </div>
+
+            </div>
           </div>
+
+        </div>
+      </fieldset>
+
+      <fieldset class="border-top border-bottom border-danger"> <!-- DATOS CONTACTO -->
+        <legend class="mt-2">Datos de Contacto</legend>
+        
+        <div class="row"> <!--  ms-5 me-5  --> <!-- Direccion -->
+
+          <div class="col-8 form-floating mb-3 mt-3">
+            <input type="text" class="form-control form-control-sm border-0 border-start border-bottom border-2"
+              id="direccion" placeholder="Escribe tu direccion" name="direccion">
+            <label for="direccion" class="ms-3">Dirección</label>
+          </div>
+
+          <div class="col-4 form-floating mt-3 mb-3">
+            <input type="text" class="form-control border-0 border-start border-bottom border-2" id="cp"
+              placeholder="Escribe tu codigo postal" name="codPostal" value="46007" maxlength="5">
+            <label for="cp" class="ms-3" size="5">C.P.</label>
+          </div>
+
+        </div>
+        <div class="row"> <!--  ms-5 me-5  --> <!-- Correo -->
+
+          <div class="col-md-6 form-floating mb-3 mt-3">
+            <input type="email" class="form-control form-control-sm border-0 border-start border-bottom border-2"
+              id="correo" placeholder="Escribe tu correo" name="correo">
+            <label for="correo" class="ms-3">Correo</label>
+          </div>
+
+          <div class="col-md-6 form-floating mt-3 mb-3">
+            <input type="email" class="form-control border-0 border-start border-bottom border-2" id="correo2"
+              placeholder="Verifica tu correo" name="correo2">
+            <label for="correo2" class="ms-3">Verificar correo</label>
+          </div>
+
         </div>
 
+        <div class="row"> <!--  ms-5 me-5  --> <!-- Telefono -->
+
+          <div class="col-5 form-floating mb-3 mt-3">
+            <input type="tel" class="form-control form-control-sm border-0 border-start border-bottom border-2"
+              id="movil" placeholder="Escribe tu telefono" name="movil" maxlength="13" value="+34 ">
+            <label for="movil" class="ms-3">Teléfono móvil</label>
+          </div>
+
+        </div>
+      </fieldset>
+
+      <fieldset class="border-top border-bottom border-danger"> <!-- DATOS BANCARIOS -->
+        <legend class="mt-2">Datos Bancarios</legend>
+        
+        <div class="row"> <!--  ms-5 me-5  --> <!-- Cuenta Bancaria -->
+          <span class="ms-3 g-0">Cuenta Bancaria</span>
+
+          <div class="col form-floating mb-3 mt-3">
+            <input type="text" class="form-control form-control-sm border-0 border-start border-bottom border-2"
+              id="iban" placeholder="iban" name="iban" maxlength="4">
+            <label for="iban" class="ms-3">IBAN</label>
+          </div>
+
+          <div class="col form-floating mt-3 mb-3">
+            <input type="text" class="form-control border-0 border-start border-bottom border-2" id="entidad"
+              placeholder="entidad" name="entidad" maxlength="4">
+            <label for="entidad" class="ms-3">Entidad</label>
+          </div>
+
+          <div class="col form-floating mb-3 mt-3">
+            <input type="text" class="form-control form-control-sm border-0 border-start border-bottom border-2"
+              id="oficina" placeholder="oficina" name="oficina" maxlength="4">
+            <label for="oficina" class="ms-3">Oficina</label>
+          </div>
+
+          <div class="col form-floating mt-3 mb-3">
+            <input type="text" class="form-control border-0 border-start border-bottom border-2" id="dc"
+              placeholder="dc" name="dc" maxlength="2">
+            <label for="dc" class="ms-3">DC</label>
+          </div>
+
+          <div class="col form-floating mt-3 mb-3">
+            <input type="text" class="form-control border-0 border-start border-bottom border-2" id="cuenta"
+              placeholder="Verifica tu correo" name="cuenta" maxlength="10">
+            <label for="cuenta" class="ms-3">Número de cuenta</label>
+          </div>
+
+        </div>
+      </fieldset>
+
+      <fieldset class="border-top border-bottom border-danger mb-3"> <!-- CUESTIONARIO -->
+        <legend class="mt-2">Encuesta (opcional)</legend>
+          <label for="mes" class="ms-3">¿Cómo nos conoció?</label>
+          <div class="col-md mb-2">
+            
+            <select class="form-select" id="mes" name="mes">
+              <option>Enero</option>
+              <option>Febrero</option>
+              <option>Marzo</option>
+              <option>Abril</option>
+              <option>Mayo</option>
+              <option>Junio</option>
+              <option>Julio</option>
+              <option>Agosto</option>
+              <option>Septiembre</option>
+              <option>Octubre</option>
+              <option>Noviembre</option>
+              <option>Diciembre</option>
+            </select>
+          </div>
+
+        </div>
       </fieldset>
     </form>
 
