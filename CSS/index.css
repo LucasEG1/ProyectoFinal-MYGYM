@@ -1,3 +1,15 @@
+* {
+    box-sizing: border-box;
+}
 .carousel-inner{
     height: 200px;
-   }
+}
+
+.pdesc{
+    text-align: center;
+}
+
+.tdesc{
+    text-align: center;
+    color: red;
+}
