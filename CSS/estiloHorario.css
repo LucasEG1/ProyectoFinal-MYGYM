@@ -1,6 +1,58 @@
 :root {
-    --rojo: rgb(255, 0, 0);
-    --rosa: rgb(216, 30, 91);
+    --colorTH: rgb(207, 8, 108);
     --blackCoffee: rgb(58, 51, 53);
-    --amarillo: rgb(250, 169, 22);
+    --colorLetra: rgb(161, 24, 6);
+    --wheat: rgb(245, 222, 179);
+    --bordes: rgb(0, 0, 0);
+}
+
+* {
+    box-sizing: border-box;
+}
+body {
+    background-image: url(../imgs/peso\ muerto.png);
+    background-repeat: unset;
+}
+
+/*TABLE*/
+table {
+    text-align: center;
+    border-collapse: collapse;
+    background-color: var(--blackCoffee);
+}
+/*TH*/
+tr th {
+    color: var(--colorTH);
+    border: 2px solid;
+    border-color: var(--colorTH);
+}
+/*TR*/
+tr {
+    color: var(--colorLetra);
+}
+
+/*TD*/
+tr td:hover {
+    color: var(--blackCoffee);
+    background-color: var(--wheat);
+}
+
+td[rowspan="2"] {
+    vertical-align: middle;
+}
+tr td {
+    border: 1px solid;
+    border-color: var(--bordes);
+}
+
+/*IDS*/
+#descanso {
+    color: var(--blackCoffee);
+    background-color: var(--colorLetra);
+    font-weight: bold;
+}
+#descanso2 {
+    color: var(--blackCoffee);
+    background-color: var(--colorLetra);
+    font-weight: bold;
 }
