@@ -69,18 +69,20 @@
   <div class="my-4 text-muted border shadow" id="cuerpo">
 
     <form action="formulario.php" method="get" autocomplete="on" class="my-5 mx-5">
-      <fieldset class="border-top border-bottom border-danger border-2 px-3" style="border-radius:20px;"> <!-- DATOS PERSONALES -->
+      <fieldset class="border-top border-bottom border-danger border-2 px-3">
+        <!-- DATOS PERSONALES -->
 
         <legend class="mt-2">Datos Personales</legend>
-        <div class="row"> <!--  ms-5 me-5  -->
+        <div class="row">
+          <!--  ms-5 me-5  -->
 
-          <div class="col-5 form-floating mb-3 mt-3">
-            <input type="text" class="form-control border-0 border-start border-bottom border-2"
-              id="nombre" placeholder="Escribe tu nombre" name="nomb">
+          <div class="col-md-5 form-floating mb-3 mt-3">
+            <input type="text" class="form-control border-0 border-start border-bottom border-2" id="nombre"
+              placeholder="Escribe tu nombre" name="nomb">
             <label for="nombre" class="ms-3">Nombre</label>
           </div>
 
-          <div class="col-7 form-floating mt-3 mb-3">
+          <div class="col-md-7 form-floating mt-3 mb-3">
             <input type="text" class="form-control border-0 border-start border-bottom border-2" id="apellido"
               placeholder="Escribe tus apellidos" name="apellido">
             <label for="apellido" class="ms-3">Apellidos</label>
@@ -90,18 +92,20 @@
 
         <div class="row">
 
-          <div class="col-4 form-floating mb-3 mt-4"> <!-- DNI -->
+          <div class="col-sm-5 col-md-4 form-floating mb-3 mt-4">
+            <!-- DNI -->
             <input type="text" class="form-control form-control-sm border-0 border-start border-bottom border-2"
-              id="dni" placeholder="Escribe tu dni" name="dni">
+              id="dni" placeholder="Escribe tu dni" name="dni" maxlength="9">
             <label for="dni" class="ms-3">Dni</label>
           </div>
 
-          <div class="col-4 form-floating ps-3"> <!-- Fecha Nacimiento -->
+          <div class="col-sm-7 col-md-4 form-floating ps-3">
+            <!-- Fecha Nacimiento -->
 
             <div class="row">
               <span class="ms-3 g-0">Fecha Nacimiento</span>
 
-              <div class="col-md-3 form-floating mb-2">
+              <div class="col-sm-3 col-md-4 form-floating mb-2">
                 <select class="form-select border-0 border-start border-bottom border-2" id="dia" name="dia">
                   <option>1</option>
                   <option>2</option>
@@ -138,7 +142,7 @@
                 <label for="dia" class="ms-3">Dia</label>
               </div>
 
-              <div class="col-md form-floating mb-3">
+              <div class="col-sm-5 col-md-4 form-floating mb-3">
                 <select class="form-select border-0 border-start border-bottom border-2" id="mes" name="mes">
                   <option>Enero</option>
                   <option>Febrero</option>
@@ -156,7 +160,7 @@
                 <label for="mes" class="ms-3">Mes</label>
               </div>
 
-              <div class="col-md-3 form-floating mb-3">
+              <div class="col-sm-3 col-md-4 form-floating mb-3">
                 <select class="form-select border-0 border-start border-bottom border-2" id="año" name="año">
                   <option value="2022">2022</option>
                   <option value="2021">2021</option>
@@ -238,20 +242,21 @@
             </div>
           </div>
 
-          <div class="col-4 form-floating ps-5"> <!-- Div Género-->
+          <div class="col-md-4 form-floating ps-2">
+            <!-- Div Género-->
 
             <div class="row">
-              <span class="ms-3 g-0">Sexo</span>
+              <span class="g-4">Sexo</span>
 
-              <div class="col-md-3 form-floating mt-2">
-                <button type="button"
-                  class="btn btn-outline-secondary border-0 border-start border-bottom border-2"
+              <div class="col-3 form-floating mt-2">
+                <button type="button" class="btn btn-outline-secondary border-0 border-start border-bottom border-2"
                   id="hombre">Hombre</button>
               </div>
 
-              <div class="col-md-3 form-floating mt-2">
+              <div class="col-3 form-floating mt-2">
                 <button type="button"
-                  class="btn btn-outline-secondary ms-2 border-0 border-start border-bottom border-2" id="mujer">Mujer</button>
+                  class="btn btn-outline-secondary ms-4 border-0 border-start border-bottom border-2"
+                  id="mujer">Mujer</button>
               </div>
 
             </div>
@@ -260,10 +265,13 @@
         </div>
       </fieldset>
 
-      <fieldset class="border-top border-bottom border-danger px-3" style="border-radius:20px;"> <!-- DATOS CONTACTO -->
+      <fieldset class="border-top border-bottom border-danger px-3">
+        <!-- DATOS CONTACTO -->
         <legend class="mt-2">Datos de Contacto</legend>
-        
-        <div class="row"> <!--  ms-5 me-5  --> <!-- Direccion -->
+
+        <div class="row">
+          <!--  ms-5 me-5  -->
+          <!-- Direccion -->
 
           <div class="col-8 form-floating mb-3 mt-3">
             <input type="text" class="form-control form-control-sm border-0 border-start border-bottom border-2"
@@ -278,7 +286,9 @@
           </div>
 
         </div>
-        <div class="row"> <!--  ms-5 me-5  --> <!-- Correo -->
+        <div class="row">
+          <!--  ms-5 me-5  -->
+          <!-- Correo -->
 
           <div class="col-md-6 form-floating mb-3 mt-3">
             <input type="email" class="form-control form-control-sm border-0 border-start border-bottom border-2"
@@ -294,9 +304,11 @@
 
         </div>
 
-        <div class="row"> <!--  ms-5 me-5  --> <!-- Telefono -->
+        <div class="row">
+          <!--  ms-5 me-5  -->
+          <!-- Telefono -->
 
-          <div class="col-5 form-floating mb-3 mt-3">
+          <div class="col-sm-5 form-floating mb-3 mt-3">
             <input type="tel" class="form-control form-control-sm border-0 border-start border-bottom border-2"
               id="movil" placeholder="Escribe tu telefono" name="movil" maxlength="13" value="+34 ">
             <label for="movil" class="ms-3">Teléfono móvil</label>
@@ -305,10 +317,13 @@
         </div>
       </fieldset>
 
-      <fieldset class="border-top border-bottom border-danger px-3" style="border-radius:20px;"> <!-- DATOS BANCARIOS -->
+      <fieldset class="border-top border-bottom border-danger px-3">
+        <!-- DATOS BANCARIOS -->
         <legend class="mt-2">Datos Bancarios</legend>
-        
-        <div class="row"> <!--  ms-5 me-5  --> <!-- Cuenta Bancaria -->
+
+        <div class="row">
+          <!--  ms-5 me-5  -->
+          <!-- Cuenta Bancaria -->
           <span class="ms-3 g-0">Cuenta Bancaria</span>
 
           <div class="col col-lg-4 form-floating mb-3 mt-3">
@@ -344,86 +359,92 @@
         </div>
       </fieldset>
 
-      <fieldset class="border-top border-bottom border-danger px-3" style="border-radius:20px;"> <!-- CUESTIONARIO -->
+      <fieldset class="border-top border-bottom border-danger px-3">
+        <!-- CUESTIONARIO -->
         <legend class="mt-2">Encuesta (opcional)</legend>
-          <div class="row">
+        <div class="row">
 
-            <div class="col-md-5 mb-3">
-              <label for="conocer" class="ms-1 mb-1">¿Cómo nos conoció?</label>
-              <select class="form-select border-0 border-start border-bottom" id="conocer" name="conocer">
-                <option>--Seleccionar--</option>
-                <option>A través de las redes sociales</option>
-                <option>Página web</option>
-                <option>A través de conocidos</option>
-                <option>Otros afiliados</option>
-                <option>Publicidad</option>
-                <option>Pasé por delante del centro</option>
-                <option>Otros</option>
-              </select>
-            </div>
-
-            <div class="col-md-5 mb-3">
-              <label for="motivo" class="ms-1 mb-1">¿Motivos por lo que se inscribió?</label>
-              <select class="form-select border-0 border-start border-bottom" id="motivo" name="motivo">
-                <option>--Seleccionar--</option>
-                <option>Por salud</option>
-                <option>Bajar de peso</option>
-                <option>Por recomendación médica</option>
-                <option>Por ocio</option>
-                <option>Precios</option>
-                <option>Instalaciones</option>
-                <option>Otros</option>
-              </select>
-            </div>
+          <div class="col-md-5 mb-3">
+            <label for="conocer" class="ms-1 mb-1">¿Cómo nos conoció?</label>
+            <select class="form-select border-0 border-start border-bottom" id="conocer" name="conocer">
+              <option>--Seleccionar--</option>
+              <option>A través de las redes sociales</option>
+              <option>Página web</option>
+              <option>A través de conocidos</option>
+              <option>Otros afiliados</option>
+              <option>Publicidad</option>
+              <option>Pasé por delante del centro</option>
+              <option>Otros</option>
+            </select>
           </div>
+
+          <div class="col-md-5 mb-3">
+            <label for="motivo" class="ms-1 mb-1">¿Motivos por lo que se inscribió?</label>
+            <select class="form-select border-0 border-start border-bottom" id="motivo" name="motivo">
+              <option>--Seleccionar--</option>
+              <option>Por salud</option>
+              <option>Bajar de peso</option>
+              <option>Por recomendación médica</option>
+              <option>Por ocio</option>
+              <option>Precios</option>
+              <option>Instalaciones</option>
+              <option>Otros</option>
+            </select>
+          </div>
+        </div>
       </fieldset>
 
-      <fieldset class="border-top border-bottom border-danger mb-3 px-3 pb-3" style="border-radius:20px;"> <!-- TERMINOS Y CONDICIONES -->
+      <fieldset class="border-top border-bottom border-danger mb-3 px-3 pb-3">
+        <!-- TERMINOS Y CONDICIONES -->
         <legend class="my-2">Términos y Condiciones</legend>
-          
-            <div class="container border rounded-3 pt-3">
-              <h6>INFORMACION BÁSICA SOBRE PROTECCIÓN DE DATOS</h6>
-              <p>
-                Responsable: MY GYM, S.L.. Finalidades: Los datos serán tratados 
-                para gestionar el servicio y llevar a cabo las labores administrativas derivadas. Asimismo, en caso de que el Interesado 
-                lo autorizase, los datos también serán tratados para el envío de comunicaciones y fines comerciales, gestionar el acceso 
-                a otros centros, elaborar un perfil comercial del socio y gestionar su alta en la plataforma mygym.provis.es. Derechos: 
-                Los interesados tienen derecho a retirar su consentimiento, también a acceder, rectificar y suprimir sus datos, así como a 
-                limitar el tratamiento de estos u oponerse a ello.
-              </p>
-            </div>
 
-            <div class="row mt-3 ps-3">
+        <div class="container border rounded-3 pt-3">
+          <h6>INFORMACION BÁSICA SOBRE PROTECCIÓN DE DATOS</h6>
+          <p>
+            Responsable: MY GYM, S.L.. Finalidades: Los datos serán tratados
+            para gestionar el servicio y llevar a cabo las labores administrativas derivadas. Asimismo, en caso de que
+            el Interesado
+            lo autorizase, los datos también serán tratados para el envío de comunicaciones y fines comerciales,
+            gestionar el acceso
+            a otros centros, elaborar un perfil comercial del socio y gestionar su alta en la plataforma
+            mygym.provis.es. Derechos:
+            Los interesados tienen derecho a retirar su consentimiento, también a acceder, rectificar y suprimir sus
+            datos, así como a
+            limitar el tratamiento de estos u oponerse a ello.
+          </p>
+        </div>
 
-              <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="check1" name="condiciones" value="something">
-                <label class="form-check-label" for="check1">He leido y acepto las 
-                  <a href="#" target="_blank" class="text-info">Condiciones Generales</a>
-                   para realizar el alta <b>online.</b>
-                </label>
-              </div>
+        <div class="row mt-3 ps-3">
 
-              <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="check2" name="normas" value="something">
-                <label class="form-check-label" for="check2">He leido y acepto las 
-                  <a href="#" target="_blank" class="text-info">Normas de Uso del centro</a>.
-                </label>
-              </div>
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="check1" name="condiciones" value="something">
+            <label class="form-check-label" for="check1">He leido y acepto las
+              <a href="#" target="_blank" class="text-info">Condiciones Generales</a>
+              para realizar el alta <b>online.</b>
+            </label>
+          </div>
 
-              <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="check3" name="politica" value="something">
-                <label class="form-check-label" for="check3">He leido y acepto la 
-                  <a href="#" target="_blank" class="text-info">Política de Privacidad</a>.
-                </label>
-              </div>
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="check2" name="normas" value="something">
+            <label class="form-check-label" for="check2">He leido y acepto las
+              <a href="#" target="_blank" class="text-info">Normas de Uso del centro</a>.
+            </label>
+          </div>
 
-            </div>
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="check3" name="politica" value="something">
+            <label class="form-check-label" for="check3">He leido y acepto la
+              <a href="#" target="_blank" class="text-info">Política de Privacidad</a>.
+            </label>
+          </div>
+
+        </div>
       </fieldset>
     </form>
 
   </div>
 
-  
+
 
 </body>
 
