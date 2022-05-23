@@ -13,3 +13,13 @@
     text-align: center;
     color: red;
 }
+
+
+body{
+    background-image: url(/imgs/); 
+    background-attachment: fixed; 
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: 75%; 
+    background-repeat: no-repeat;
+}
