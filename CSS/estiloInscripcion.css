@@ -1,12 +1,13 @@
 #principal{
     background-image: url(../imgs/bici.jpg);
+    
 }
 #cuerpo{
     background-color: white;
 }
 
-input[type=text], input[type=tel], input[type=email], input[type=select]{
-    border-radius: 0px 10px;
+input[type=text], input[type=tel], input[type=email], #dia, #mes, #año{
+    border-radius: 0px 15px;
 }
 
 fieldset{
@@ -15,4 +16,10 @@ fieldset{
 
 #botones{
     text-align: center;
+}
+
+#hombre, #mujer{
+    height: 40px;
+    border-radius: 15px;
+    width: 90px;
 }
