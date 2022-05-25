@@ -1,6 +1,4 @@
-html {
-    font-size: 62.5%;
-}
+
 body {
     background-color: #f5f3f3
 }
@@ -16,7 +14,7 @@ h4 {
 }
 header {
     padding: 20px 0 0 0;
-    background: white;
+    font-size: 30px;
     text-align: center;
 }
 @media (min-width: 750px) {
