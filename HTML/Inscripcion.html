@@ -322,17 +322,17 @@
         <fieldset class="border-top border-bottom border-danger px-3">
           <legend class="mt-2">Seleccione su cuota</legend>
 
-          <div class="row">
+          <div class="row" id="cuotas">
           
             <!-- 1 MES -->
             <span class="ms-3 g-0">Cuotas disponibles</span>
             
-            <div class="col-sm-4 col-lg-4 container mb-3 mt-3">
+            <div class="col-md-4 col-lg-4 container mb-3 mt-3">
 
               <h2>1 mes</h2>
   
-              <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#demo">Simple collapsible</button>
-              <div id="demo" class="collapse">
+              <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#mes">Simple collapsible</button>
+              <div id="mes" class="collapse" data-bs-parent="#cuotas">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -340,25 +340,25 @@
 
             </div>
 
-            <div class="col-sm-4 col-lg-4 container mb-3 mt-3">
+            <div class="col-md-4 col-lg-4 container mb-3 mt-3">
 
               <h2>6 meses</h2>
   
-              <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#demo2">Simple collapsible</button>
-              <div id="demo2" class="collapse">
+              <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#seisMeses">Simple collapsible</button>
+              <div id="seisMeses" class="collapse" data-bs-parent="#cuotas">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  
               </div>
 
             </div>
 
-            <div class="col-sm-4 col-lg-4 container mb-3 mt-3">
+            <div class="col-md-4 col-lg-4 container mb-3 mt-3">
 
               <h2>1 año</h2>
   
-              <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#demo3">Simple collapsible</button>
-              <div id="demo3" class="collapse">
+              <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#año">Simple collapsible</button>
+              <div id="año" class="collapse" data-bs-parent="#cuotas">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -374,7 +374,7 @@
           <legend class="mt-2">Datos Bancarios</legend>
 
           <div class="row">
-            <!--  ms-5 me-5  -->
+            
             <!-- Cuenta Bancaria -->
             <span class="ms-3 g-0">Cuenta Bancaria</span>
 
@@ -472,31 +472,119 @@
 
           <div class="row mt-3 ps-3">
 
+            <!-- CHECK CONDICIONES -->
             <div class="form-check">
-              <input type="checkbox" class="form-check-input" id="check1" name="condiciones" value="something" required>
+              <input type="checkbox" class="form-check-input" id="check1" name="condiciones" value="condiciones" required>
               <label class="form-check-label" for="check1">He leido y acepto las
-                <a href="#" target="_blank" class="text-info">Condiciones Generales</a>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#condiciones" class="text-info">Condiciones Generales</a>
                 para realizar el alta <b>online.</b>
               </label>
             </div>
 
+            <!--MODAL CONDICIONES-->
+            <div class="modal fade" id="condiciones">
+              <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+            
+                  <!-- Modal Header -->
+                  <div class="modal-header">
+                    <h4 class="modal-title">CONDICIONES GENERALES</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                  </div>
+            
+                  <!-- Modal body -->
+                  <div class="modal-body">
+                    <h3>Ejemplo de condiciones</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> 
+                  </div>
+            
+                  <!-- Modal footer -->
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-info" data-bs-dismiss="modal">Cerrar</button>
+                  </div>
+            
+                </div>
+              </div>
+            </div>
+
+            <!-- CHECK NORMAS -->
             <div class="form-check">
-              <input type="checkbox" class="form-check-input" id="check2" name="normas" value="something" required>
+              <input type="checkbox" class="form-check-input" id="check2" name="normas" value="normas" required>
               <label class="form-check-label" for="check2">He leido y acepto las
-                <a href="#" target="_blank" class="text-info">Normas de Uso del centro</a>.
+                <a href="#" data-bs-toggle="modal" data-bs-target="#normas" class="text-info">Normas de Uso del centro</a>.
               </label>
             </div>
 
+            <!--MODAL NORMAS-->
+            <div class="modal fade" id="normas">
+              <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+            
+                  <!-- Modal Header -->
+                  <div class="modal-header">
+                    <h4 class="modal-title">NORMAS DE USO</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                  </div>
+            
+                  <!-- Modal body -->
+                  <div class="modal-body">
+                    <h3>Ejemplo de normas</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> 
+                  </div>
+            
+                  <!-- Modal footer -->
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-info" data-bs-dismiss="modal">Cerrar</button>
+                  </div>
+            
+                </div>
+              </div>
+            </div>
+
+            <!-- CHECK PRIVACIDAD -->
             <div class="form-check">
-              <input type="checkbox" class="form-check-input" id="check3" name="politica" value="something" required>
+              <input type="checkbox" class="form-check-input" id="check3" name="politica" value="privacidad" required>
               <label class="form-check-label" for="check3">He leido y acepto la
-                <a href="#" target="_blank" class="text-info">Política de Privacidad</a>.
+                <a href="#" data-bs-toggle="modal" data-bs-target="#privacidad" class="text-info">Política de Privacidad</a>.
               </label>
+            </div>
+
+            <!--MODAL PRIVACIDAD-->
+            <div class="modal fade" id="privacidad">
+              <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+            
+                  <!-- Modal Header -->
+                  <div class="modal-header">
+                    <h4 class="modal-title">POLITICA DE PRIVACIDAD</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                  </div>
+            
+                  <!-- Modal body -->
+                  <div class="modal-body">
+                    <h3>Ejemplo de politica de privacidad</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> 
+                  </div>
+            
+                  <!-- Modal footer -->
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-info" data-bs-dismiss="modal">Cerrar</button>
+                  </div>
+            
+                </div>
+              </div>
             </div>
 
           </div>
         </fieldset>
 
+        <!-- BOTONES DE ACEPTAR Y CANCELAR -->
         <div class="mx-auto mt-5" id="botones">
 
           <button type="submit" class="btn btn-lg btn-outline-success">Aceptar</button>
