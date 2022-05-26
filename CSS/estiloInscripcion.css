@@ -19,7 +19,7 @@ fieldset{
     text-align: center;
 }
 
-#hombre, #mujer{
+#hombre, #mujer, #otros{
     height: 40px;
     border-radius: 15px;
     width: 90px;
